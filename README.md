@@ -10,6 +10,7 @@ Absen : 15
 
 ## Hasil Praktikum
 
-![image.png](assets/images/ss.png)
+![image.png](assets/images/1.png) <br>
+![image.png](assets/images/2.png)
 
 <br>

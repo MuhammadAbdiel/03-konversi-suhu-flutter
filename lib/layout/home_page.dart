@@ -35,6 +35,24 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            Column(
+              children: const [
+                Text(
+                  'Muhammad Abdiel Firjatullah',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 20,
+                  ),
+                ),
+                Text(
+                  '2031710156',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 20,
+                  ),
+                ),
+              ],
+            ),
             TextFormField(
               controller: _inputUser,
               keyboardType: TextInputType.number,
