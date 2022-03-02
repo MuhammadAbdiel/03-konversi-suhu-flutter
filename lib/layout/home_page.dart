@@ -11,12 +11,14 @@ class _HomePageState extends State<HomePage> {
   final TextEditingController _inputUser = TextEditingController();
 
   double _celcius = 0;
+  double _fahrenheit = 0;
   double _kelvin = 0;
   double _reamur = 0;
 
   void temperatureConversion() {
     setState(() {
       _celcius = double.parse(_inputUser.text);
+      _fahrenheit = (_celcius * (9 / 5)) + 32;
       _reamur = (4 / 5) * _celcius;
       _kelvin = _celcius + 273.15;
     });
@@ -35,9 +37,41 @@ class _HomePageState extends State<HomePage> {
           children: [
             TextFormField(
               controller: _inputUser,
+              keyboardType: TextInputType.number,
               decoration: const InputDecoration(
                 hintText: 'Masukkan suhu dalam celcius',
               ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    const Text('Suhu dalam Celcius'),
+                    const SizedBox(height: 15),
+                    Text(
+                      '' + _celcius.toStringAsFixed(2),
+                      style: const TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    const Text('Suhu dalam Fahrenheit'),
+                    const SizedBox(height: 15),
+                    Text(
+                      '' + _fahrenheit.toStringAsFixed(2),
+                      style: const TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
