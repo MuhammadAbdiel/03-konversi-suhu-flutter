@@ -1,16 +1,15 @@
-# flutter_project
+# 03-konversi-suhu-flutter
 
-A new Flutter project.
+<br>
 
-## Getting Started
+Nama : Muhammad Abdiel Firjatullah <br>
+NIM : 2031710156 <br>
+Prodi : D3 Manajemen Informatika <br>
+Kelas : MI - 2C
+Absen : 15
 
-This project is a starting point for a Flutter application.
+## Hasil Praktikum
 
-A few resources to get you started if this is your first Flutter project:
+![image.png](assets/images/result.png)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<br>
