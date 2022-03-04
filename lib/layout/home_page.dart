@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/widget/identity_widget.dart';
+import 'package:flutter_project/widget/result_kelvin_reamur.dart';
+import 'package:flutter_project/widget/result_celcius_fahrenheit.dart';
+import 'package:flutter_project/widget/input_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -35,93 +39,10 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Column(
-              children: const [
-                Text(
-                  'Muhammad Abdiel Firjatullah',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  '2031710156',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 20,
-                  ),
-                ),
-              ],
-            ),
-            TextFormField(
-              controller: _inputUser,
-              keyboardType: TextInputType.number,
-              decoration: const InputDecoration(
-                hintText: 'Masukkan suhu dalam celcius',
-              ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  children: [
-                    const Text('Suhu dalam Celcius'),
-                    const SizedBox(height: 15),
-                    Text(
-                      '' + _celcius.toStringAsFixed(2),
-                      style: const TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    const Text('Suhu dalam Fahrenheit'),
-                    const SizedBox(height: 15),
-                    Text(
-                      '' + _fahrenheit.toStringAsFixed(2),
-                      style: const TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  children: [
-                    const Text('Suhu dalam Kelvin'),
-                    const SizedBox(height: 15),
-                    Text(
-                      '' + _kelvin.toStringAsFixed(2),
-                      style: const TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    const Text('Suhu dalam Reamur'),
-                    const SizedBox(height: 15),
-                    Text(
-                      '' + _reamur.toStringAsFixed(2),
-                      style: const TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
+            const IdentityWidget(),
+            InputWidget(inputUser: _inputUser),
+            ResultCelciusFahrenheit(celcius: _celcius, fahrenheit: _fahrenheit),
+            ResultKelvinReamur(kelvin: _kelvin, reamur: _reamur),
             SizedBox(
               width: double.infinity,
               height: 50,
